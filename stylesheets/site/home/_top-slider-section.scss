@@ -1,0 +1,9 @@
+/*
+	King Arthur Flour home page
+	top-slider-section
+*/
+
+.top-slider-section {
+	@extend %center-block;
+	outline: $outline;
+}

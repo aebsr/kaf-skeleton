@@ -1,0 +1,17 @@
+
+
+#scrollup {
+	width: 38px;
+	height: 34px;
+	position: fixed;
+	bottom: 68px; 
+	right: 0;
+	display: none;
+	padding-top: 10px;
+}
+
+#scrollup > i { color: $black-3; }
+.lt-ie9 #scrollup > i { color: $dark-gray; }
+
+#scrollup:hover > i { color: $link; }
+#scrollup:active > i { color: $link; }

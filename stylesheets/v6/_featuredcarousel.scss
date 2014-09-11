@@ -1,0 +1,58 @@
+#featured-today-container { 
+	margin: 1em 0; 
+	@include bp($bp-tablet) { 
+		margin: 1em 2em;
+	}
+}
+
+
+
+/* featured today carousel */
+
+.featured-today { 
+	border-bottom: $border;
+	margin: 2em 0; 
+	@include bp($bp-tablet) {
+		margin: 2em;
+	}
+}
+.lt-ie9 .featured-today { margin: 2em; }
+
+.featured-today > h4 { 
+	font-size: 1.2em; 
+	color: $dark-red; 
+	text-transform: uppercase; 
+   overflow: hidden;
+   text-align: center;
+   letter-spacing: .03em;
+   @include bp($bp-tablet) {
+   	font-size: 1.35em;
+   }
+}
+.lt-ie9 .featured-today > h4 { font-size: 1.35em; }
+
+
+.featured-today > h4:before,
+.featured-today > h4:after {
+    background-color: #ccc;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+.featured-today > h4:before { right: 0.5em; margin-left: -50%; }
+.featured-today > h4:after { left: 0.5em; margin-right: -50%; }
+
+#featuredcarousel { margin-top: 20px; }
+.featuredcarousel-li { width: 196px; float: left; margin: 0; text-align: center; height: 200px; }
+.featuredcarousel-li > a > span { color: $medium-gray; display: block; margin-top: 4px; }
+.featuredcarousel-li > a > img { border: $medium-gray; }
+.featuredcarousel-li > a > span:after { content: " \00BB"; }
+.featuredcarousel-li > a:hover > img { border-color: #555; }
+.featuredcarousel-li > a:hover > span { color: $link; }
+
+@media print {
+	.featured-today { display: none; }
+}

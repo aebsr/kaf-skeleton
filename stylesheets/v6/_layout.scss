@@ -1,0 +1,243 @@
+/*
+	_layout.scss
+*/
+
+
+body { 
+	margin: 0;
+	color: $text;
+	font-size: 13px;
+	font-weight: $regular; 
+	font-family: $kaf-sans;
+	background-color: $white;
+}
+
+
+
+
+/* 	CLEARING ------------- */
+
+header { @extend %clearfix; }
+footer { @extend %clearfix; }
+section { @extend %clearfix; }
+
+.l-container { @extend %clearfix; }
+
+.group { @extend %clearfix; }
+
+
+
+/* 	overall layout ----------------- */
+
+
+body { 
+	@include bp($bp-tablet) { 
+		background-color: $bg-lighter; 
+	} 
+}
+.lt-ie9 body { background-color: #eeeeee; }
+
+.l-page { 
+	@extend %clearfix;
+	@extend %center-block;
+	width: 94%; 
+	position: relative; 
+	min-width: 290px;
+	//overflow: hidden;
+	@include bp($bp-tablet) { 
+		margin-bottom: 3em;
+		width: 768px; 
+		background-color: $white;
+		box-shadow: 0 0 7px rgba(0,0,0,.2); 
+		overflow: visible;
+	}
+	@include bp($bp-screen) { 
+		width: 992px; 
+	}
+}
+
+.lt-ie9 .l-page { 
+	margin-bottom: 3em;
+	width: 992px; 
+	background-color: $white;
+}
+
+
+
+
+
+
+
+.l-header { 
+	width: 20%;
+	float: left; 
+	margin: .5em 0; 
+	@include bp($bp-tablet) { 
+		margin: 1em 0 1em 2em; 
+		width: 12%;
+	}
+	@include bp($bp-screen) { 
+	
+	}
+}
+.lt-ie9 .l-header { margin: 1em 0 1em 2em; width: 12%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.l-content { 
+	margin: 1em 0; 
+	clear: both; 
+	@include bp($bp-tablet) { 
+		padding: 0 2em;
+	}
+}
+.lt-ie9 .l-content { padding: 0 2em; }
+
+
+
+
+
+.l-aside-left .primary { 
+	@include bp($bp-tablet) {
+		float: right; 
+		width: 74%; 
+	}
+}
+.lt-ie9 .l-aside-left .primary { float: right; 
+		width: 74%;  }
+
+
+.l-aside-left .secondary { 
+	@include bp($bp-tablet) {
+		float: left; 
+		width: 23%; 
+	}
+}
+.lt-ie9 .l-aside-left .secondary { float: left; width: 23%;  }
+
+
+
+/* left sidebar where content comes before primary content */
+/* used on search results page */
+.l-aside-left2 .pre-primary { 
+	@include bp($bp-tablet) {
+		float: right; 
+		width: 74%; 
+	}
+}
+.lt-ie9 .l-aside-left2 .pre-primary {  
+	float: right; 
+	width: 74%; 
+}
+
+.l-aside-left2 .secondary { 
+	@include bp($bp-tablet) {
+		float: left; 
+		width: 23%; 
+		margin-right: 3%; 
+	}
+}
+.lt-ie9 .l-aside-left2 .secondary {  
+	float: left; 
+	width: 23%; 
+	margin-right: 3%; 
+}
+
+.l-aside-left2 .primary { 
+	@include bp($bp-tablet) {
+		float: right; 
+		width: 74%; 
+	}
+}
+.lt-ie9 .l-aside-left2 .primary { 
+	float: right; 
+	width: 74%; 
+}
+
+
+
+
+
+
+
+
+/* header */
+
+
+/* 	-----------------
+	logo, branding
+	----------------- */
+
+.l-header {  }
+
+
+.kaflogo { /* applied to anchor */
+	@extend %center-block;
+	background-image: url('#{$kaf-ui-path}/kaflogo.png');
+	background-repeat: no-repeat;
+	background-position: 0 -104px;
+	height: 64px;
+	width: 64px;
+	@include bp($bp-tablet) {
+		height: 97px;
+		width: 97px;
+		background-position: 0 0;
+		margin: 12px 0;
+	}
+	@include bp($bp-screen) {
+		background-image: none; 
+		height: 119px; 
+		width: 119px; 
+	}
+}
+.lt-ie9 .kaflogo { 
+	background-image: none; 
+	height: 119px; 
+	width: 119px; 
+	margin: 12px 0;
+}
+
+
+.kaflogo > img { 
+	display: none; 
+	@include bp($bp-screen) {
+		display: block;
+	}
+}
+.lt-ie9 .kaflogo > img { display: block; }
+
+@media print {
+	.kaflogo img { display: block; }
+}
+
+
+
+
+
+
+
+
+/* 	content layout ----------------- */
+
+.primary { @extend %clearfix; position: relative; }
+.secondary { @extend %clearfix; position: relative; }
+
+
+.column {
+	position: relative;
+	@include bp($bp-tablet) { float: left; }
+}
+.lt-ie9 .column { float: left; }
+
+

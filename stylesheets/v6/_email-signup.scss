@@ -1,0 +1,182 @@
+/* email signup and chat */
+
+.emailchat-banner { 
+	border-top: $border-dash; 
+	@include bp($bp-tablet) { 
+		margin: .5em 2em 0 2em; 
+		padding: 1em 0; 
+	}
+}
+.lt-ie9 .emailchat-banner { 
+	margin: .5em 2em; 
+	border-top: $border-dash; 
+	padding-top: 1em; 
+}
+
+.emailchat-banner > .chat { 
+	text-align: center;
+	@include bp($bp-tablet) { 
+		width: 33%; 
+		float: right; 
+		border-left: $border-dot; 
+		margin: 0; 
+	}
+}
+.lt-ie9 .emailchat-banner > .chat { 
+	width: 33%; 
+	float: right; 
+	border-left: $border-dash; 
+	margin: 0; 
+	
+}
+
+
+
+.emailsignup { 
+	margin: 2em 0; 
+	@include bp($bp-tablet) { 
+		width: 66%;
+		margin: 8px 0 4px 0; 
+	}
+}
+.lt-ie9 .emailsignup { 
+	width: 66%; 
+	margin: 8px 0 4px 0;
+}
+
+.emailsignup > .letter { 
+	display: none;
+	@include bp($bp-tablet) { 
+		margin: -6px 1em; 
+		width: 55px; 
+		height: 50px; 
+		float: left; 
+		display: block;
+		background-image: url('#{$kaf-ui-path}/letter.png');	
+	}
+}
+.lt-ie9 .emailsignup > .letter { 
+	width: 55px; 
+	height: 50px; 
+	float: left; 
+	display: block;
+	margin: -6px 1em;
+	background-image: url('#{$kaf-ui-path}/letter.png');
+}
+
+.emailsignup > h5 { 
+	font-size: 1.4em; 
+	color: $text;
+	line-height: 130%;
+	margin: 0 0 10px 0;
+	color: $dark-red;
+	@include bp($bp-tablet) { 
+		min-height: auto; 
+		width: 30%; 
+		float: left; 
+		font-size: 1.1em; 
+		margin: 0; 
+		color: $text;
+	}
+	@include bp($bp-screen) { 
+		margin: 8px 0 0 0; 
+	}
+}
+.lt-ie9 .emailsignup > h5 { 
+	min-height: auto; 
+	width: 30%; 
+	float: left; 
+	font-size: 1.1em; 
+	margin: 8px 0 0 0;
+}
+
+.emailsignupform { 
+	position: relative;
+	margin: 2px 0;
+	@extend %clearfix;
+	@include bp($bp-tablet) { 
+		float: left; 
+		width: 50%; 
+	}
+}
+.lt-ie9 .emailsignupform { 
+	float: left; 
+	width: 50%; 
+}
+
+.emailsignup-input {  
+	@include border-left-radius(3px);
+	font-size: 1.2em;
+	padding: 0 8% 0 1%;
+	height: 43px;
+	background-color: $lightest-gray;
+	color: $text;
+	font-weight: $bold;
+	width: 90%;
+	@include bp($bp-tablet) { 
+		background-color: $white; 
+		padding: 0 8px; 
+		font-size: 1em; 
+		line-height: normal; 
+		font-weight: $regular; 
+		height: 32px !important; 
+		line-height: 32px;  
+	}
+}
+.lt-ie9 .emailsignup-input {  
+	background-color: $white; 
+	padding: 0 8px; 
+	font-size: 1em; 
+	line-height: normal; 
+	font-weight: $regular; 
+	height: 32px !important; 
+	line-height: 32px; 
+}
+
+.emailsignup-input:focus { 
+	box-shadow: none; 
+	border-color: $dark-gray; 
+	color: $text; 
+}
+
+.emailsignup-submit {  
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*
+	background-color: transparent;
+	@include linear-gradient($dark-orange, $orange);
+	border: $link;
+	color: $white;
+	font-size: 1.2em;
+	
+	*/
+	@extend %btnorange;
+	box-shadow: none;
+	width: 60px;
+	display: block;
+	
+	@include border-left-radius(0px);
+	height: 45px !important; 
+	line-height: 45px;
+	padding: 0 8px;
+	@include bp($bp-tablet) { 
+		width: auto; 
+		height: 34px !important; 
+		line-height: 34px; 
+		font-size: 1em; 
+	}
+}
+
+.lt-ie9 .emailsignup-submit { 
+	/*width: auto; */
+	height: 34px !important; 
+	line-height: 34px; 
+	font-size: 1em; 
+}
+
+.emailsignup-submit:hover { background: $red; border-color: $dark-red; }
+
+
+
+

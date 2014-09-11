@@ -1,0 +1,233 @@
+
+
+
+/* newsletter signup in foot banner */
+
+/* 	-----------------
+	email signup
+	----------------- */
+
+.l-emailchat { 
+	@extend %clearfix;
+	padding: .5em 0; 
+	margin: 1em 0; 
+	border-top: 1px dashed $light-gray; 
+	@include bp($bp-tablet) {
+		padding: 1em 0; 
+		margin: 1em 18px 0 18px;
+	}
+	@include bp($bp-screen) {
+		margin: 1em 24px 0 24px;
+	}
+}
+.lt-ie9 .l-emailchat { padding: 1em; margin: 1em 24px; }
+
+@media print {
+	.l-emailchat { display: none; }
+}
+
+
+.l-emailchat .chatwithcs, 
+.l-emailchat .chatwithabaker { 
+	display: none; 
+	@include bp($bp-tablet) { 
+		display: block; 
+		float: right;
+		width: 27%; 
+	}
+}
+.lt-ie9 .l-emailchat .chatwithcs,
+.lt-ie9 .l-emailchat .chatwithabaker { 
+	display: block; 
+	float: right;
+	width: 27%;
+	@extend %center-block;
+}
+
+
+.emailsignup { 
+	@include bp($bp-tablet) {
+		width: 70%; 
+		margin: 0; 
+		padding-bottom: 0; 
+	}
+}
+.lt-ie9 .emailsignup { width: 70%; margin: 0; padding-bottom: 0; }
+
+
+.emailsignup > h5 { 
+	font-size: 1.4em; 
+	margin: .5em 0; 
+	color: $dark-red; 
+	@include bp($bp-tablet) {
+		margin: 0; 
+		float: left;
+		text-align: right;
+		width: 25%;
+		color: $text;
+		font-size: 1em;
+		padding: 1.2em 1em 1.2em 63px;
+	  	background-image: url('#{$kaf-ui-path}/v6-letter.png');
+	  	background-repeat: no-repeat;
+	  	background-position: 12px -2px;
+	}
+}
+.lt-ie9 .emailsignup > h5 { 
+	margin: 0; 
+	float: left;
+	width: 25%;
+	color: $text;
+	font-size: 1em;
+	padding: 1.2em 1em 1.2em 63px;
+	background-image: url('#{$kaf-ui-path}/v6-letter.png');
+	background-repeat: no-repeat;
+	background-position: 0 -2px;
+}
+
+
+.sp-emailsignup-form { 
+	position: relative; 
+	padding: .5em 0;
+	@include bp($bp-tablet) {
+		float: left; 
+		width: 50%;
+	}
+}
+.lt-ie9 .sp-emailsignup-form { float: left; width: 50%; }
+
+.sp-emailsignup-form > .emailsignup-input {  
+	font-size: 1.2em;
+	padding: .8em 8% .8em 2%;
+/*	width: 69%;
+	max-width: 250px; */
+	background-color: $lightest-gray;
+	color: $text;
+	font-weight: $bold;
+	@include border-radius(3px);
+	width: 89.5%;
+	@include bp($bp-tablet) {
+		padding: .5em .4em;
+		font-size: 1em;
+		color: $text;
+		background-color: $white;
+		font-weight: $regular;
+		border-radius: 0;
+		@include border-left-radius(3px);
+	}
+
+}
+.lt-ie9 .sp-emailsignup-form > .emailsignup-input {
+	padding: .5em .4em;
+		font-size: 1em;
+		color: $text;
+		background-color: $white;
+		font-weight: $regular;
+		border-radius: 0;
+		@include border-left-radius(3px);
+}
+
+.sp-emailsignup-form > .emailsignup-input:focus { 
+	box-shadow: none; 
+	border-color: $dark-gray; 
+	color: $text; 
+}
+
+
+.sp-emailsignup-form > .emailsignup-submit {  
+	display: block;
+	position: absolute;
+	top: .5em;
+	right: 0;
+	border-radius: 0;
+	border: 0;
+	@include border-right-radius(3px);
+	background-color: transparent;
+	color: transparent;
+	box-shadow: none;
+	width: 60px; 
+	height: 45px !important; 
+	
+	background-image: url(ui/kaf-sprites-v2.png);
+	background-position: -140px -85px;
+	
+	@include bp($bp-tablet) {
+		color: $white;
+		font-weight: $regular;
+		width: auto;
+		padding: .5em;
+		top: .5em;
+		background-image: none;
+		background: $orange;
+		//@include linear-gradient(#F49228, #c60);
+		border: $link;
+		height: 33px !important; line-height: 33px; font-size: 1em;
+  }
+  
+}
+.lt-ie9 .sp-emailsignup-form > .emailsignup-submit {  
+	color: $white;
+		font-weight: $regular;
+		width: auto;
+		padding: 0 .5em;
+		top: .5em;
+		background-image: none;
+		background: $orange;
+		border: $link;
+		height: 33px !important; 
+		line-height: normal; 
+		font-size: 1em;
+}
+
+
+
+
+
+
+/* newsletter optin */
+
+#newsletteroptin {  } /* hook for jQuery */
+.emailsignup-form { padding: 2em; text-align: center; }
+.emailsignup-form #email_confirm_text { font-size: 1.3em; font-weight: $bold; padding-bottom: 1em; }
+.emailsignup-form #email_confirm_text > strong { color: $dark-red; }
+.emailsignup-form > p { margin: .5em 18px; }
+.emailsignup-form > p.note { font-size: .9em; color: $text-medium; margin-top: 0;  }
+
+.signup {
+color: #FFFFFF;
+font-size: 1.5em;
+font-weight: $regular;
+letter-spacing: .03em;
+text-decoration:none;
+padding: 12px 18px;
+
+border:1px solid #910e1f; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+ background-color: #C4132A; background-image: -webkit-gradient(linear, left top, left bottom, from(#C4132A), to(#8B0E04));
+ background-image: -webkit-linear-gradient(top, #C4132A, #8B0E04);
+ background-image: -moz-linear-gradient(top, #C4132A, #8B0E04);
+ background-image: -ms-linear-gradient(top, #C4132A, #8B0E04);
+ background-image: -o-linear-gradient(top, #C4132A, #8B0E04);
+ background-image: linear-gradient(to bottom, #C4132A, #8B0E04);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#C4132A, endColorstr=#8B0E04);
+}
+
+.signup:hover {
+ border:1px solid #670a16;
+ background-color: #C4132A; background-image: -webkit-gradient(linear, left top, left bottom, from(#C4132A), to(#C4132A));
+ background-image: -webkit-linear-gradient(top, #C4132A, #C4132A);
+ background-image: -moz-linear-gradient(top, #C4132A, #C4132A);
+ background-image: -ms-linear-gradient(top, #C4132A, #C4132A);
+ background-image: -o-linear-gradient(top, #C4132A, #C4132A);
+ background-image: linear-gradient(to bottom, #C4132A, #C4132A);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#C4132A, endColorstr=#C4132A);
+}
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 

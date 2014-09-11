@@ -1,0 +1,445 @@
+
+
+%closepic { 
+	display: block;
+	height: 32px;
+	width: 32px;
+	background-image: url('#{$kaf-ui-path}/kaf-sprites-v2.png');
+	background-repeat: no-repeat;
+	background-position:  -307px -150px;
+	text-indent: -999em; 
+}
+%closepic:hover {
+	background-position: -307px -195px;
+}
+
+%closepic > a { 
+	display: block;
+	height: 32px;
+	width: 32px;
+	background-image: url('#{$kaf-ui-path}/kaf-sprites-v2.png');
+	background-repeat: no-repeat;
+	background-position:  -307px -150px;
+	text-indent: -999em; 
+}
+%closepic > a:hover {
+	background-position: -307px -195px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.m-controller {
+	@include linear-gradient($lightest-gray, $verylight-gray);
+	display: block;
+	clear: both;
+	margin: 0 -15px -1px -15px;
+	padding: 12px 15px;
+	cursor: pointer;
+	color: $dark-gray;
+	font-weight: $bold;
+	letter-spacing: .02em;
+	font-size: 1.3em;
+	line-height: normal;
+	
+	border-top: 1px solid $light-gray;
+	border-bottom: 1px solid $light-gray;
+}
+
+.m-controller:before {
+	content: '\f067 ';
+	font-family: 'FontAwesome';
+	margin-right: 10px;
+	color: $medium-gray;
+}
+
+.m-controller.expanded:before {
+	content: '\f068 ';
+}
+
+h5.m-controller { text-transform: lowercase; font-size: 1.3em; }
+
+
+
+.expandable { 
+	padding: 1em 0; 
+	@include bp($bp-tablet) {
+		padding: 0;
+	}
+}
+
+.lt-ie9 .expandable { padding: 0; }
+
+
+
+
+
+
+
+/*               */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ajaxy-cart .close { @extend %closepic; position: absolute; top: 10px; right: 10px; }
+/*
+.ajaxy-cart .close a, .ajaxy-login .close a { 
+display: block;
+height: 32px;
+width: 32px;
+background-image: url(../ui/kaf-sprites-v2.png);
+background-repeat: no-repeat;
+background-position: -252px -174px;
+text-indent: -999em; 
+}
+.close a:hover {
+	background-position: -252px -145px;
+}*/
+
+.ajax-container .close { @extend %closepic; position: absolute; top: 10px; right: 10px; }
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+// mmenu
+.mm-list > li.nav-mobile-label {
+	color: $medium-gray;
+	font-size: .8em;
+	text-align: center;
+	padding: 6px;
+	display: block;
+}
+
+
+
+
+
+#ajaxedcontent {
+	border-radius: 7px;
+	background: $white;
+	padding: 18px;
+	min-height: 4em;
+}
+
+#modalclose {
+	position:absolute;
+	z-index: 3001;
+	background:url('#{$kaf-ui-path}/kaf-sprites-v2.png') -307px -157px  no-repeat; 
+	width:24px;
+	height:24px;
+	display:block;
+	text-indent:-9999px;
+	top: 14px;
+	right: 14px;
+}
+
+#ajaxedcontent.promo-web567 { background-color: #900; }
+#ajaxedcontent.promo-web567 > h3 { color: $white; font-size: 3em; text-align: center; margin: 10px 0;}
+#ajaxedcontent.promo-web567 > p { color: $white; font-size: 1.5em; text-align: center; margin: .5em 0 0 0; }
+#ajaxedcontent.promo-web567 > small { color: $white; font-size: .85em; text-align: left; display: block; }
+
+#ajaxedcontent.promo-SP1234 { background-color: #090; }
+#ajaxedcontent.promo-SP1234 > h3 { color: $white; font-size: 2.8em; text-align: center; font-family: Georgia, "Times New Roman", Times, serif; font-weight: $regular; margin: 10px 0; }
+#ajaxedcontent.promo-SP1234 > p { color: $white; font-size: 1.5em; text-align: center; margin: .5em 0 0 0; }
+
+
+.modalerror { padding: 3em 1em; font-size: 1.5em; }
+
+.fielderror { border-color: $red; }
+
+
+
+
+
+
+
+
+/* for accordion */
+.exp-style,
+a.exp-style {
+	position: relative;
+	display: block;
+	font-weight: $bold;
+	padding: .85em 1em;
+	font-size: 1.3em;
+	text-transform: lowercase;
+	@include linear-gradient($lightest-gray, #eee);
+	border-bottom: 1px solid #ddd;
+	margin: -1px 0 0 0;
+	cursor: pointer;
+	color: $text;
+	@include bp($bp-tablet) {
+		font-size: 1em;
+		text-transform: none;
+		background-color: transparent;
+		border: 0;
+		font-weight: inherit;
+		padding: inherit;
+		margin: inherit;
+		cursor: inherit;
+		color: $text;
+	}
+}
+
+.exp-style:first-child { 
+	border-top: 1px solid #ddd;
+}
+
+.exp-style > a { color: $text; }
+a.exp-style:hover { color: $text; border-bottom: 1px solid #ddd; }
+
+
+
+.lt-ie9 .exp-style,
+.lt-ie9 a.exp-style {
+		font-size: 1em;
+		text-transform: none;
+		background-color: transparent;
+		border: 0;
+		font-weight: inherit;
+		padding: inherit;
+		margin: inherit;
+		cursor: inherit;
+		color: $text;
+}
+.lt-ie9 .exp-style { display: block; }
+.lt-ie9 .exp-style > i { display: none; }
+.lt-ie9 .expandable { display: block; }
+
+.lt-ie9 .exp-style:first-child { 
+	border-top: none;
+}
+
+.lt-ie9 .exp-style > a { color: $text; }
+.lt-ie9 a.exp-style:hover { color: $link; border-bottom: none; }
+
+
+/*
+.bso-panel-heading { margin-bottom: -1px; text-transform: lowercase; }
+
+.bso-panel-heading > a { 
+	border: $border;
+	padding: $pad-panel;
+	display: block;
+	color: $text;
+	position: relative;
+}
+*/
+.exp-style > .fa { font-size: 1.2em; position: absolute; top: $pad-panel*1.3; right: $pad-panel; }
+
+
+
+
+/* #modal-window */
+.ajax-container .wrap {
+    position: fixed;
+    z-index: 5020;
+    background-color: $white;
+    text-align: left;
+	overflow: hidden;
+    
+    top: 50%;
+    left: 50%;
+    height: auto; /*350px;*/
+    width: 90%; 
+    margin: -200px -45%;
+    
+	-moz-box-shadow: 0 0 4px #666;
+	-webkit-box-shadow: 0 0 4px #666;
+	box-shadow: 0 0 4px #666;
+	
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+}
+
+@media only screen and (min-width: 38em) {
+	.ajax-container .wrap {
+		width: 50%; 
+		margin: -200px -25%;
+		min-width: 400px;
+	}
+}
+
+.lt-ie9 .ajax-container .wrap {
+    width: 50%; 
+    margin: -200px -25%;
+}
+
+.ajax-content { 	
+	height: 85%;
+	overflow: auto;
+	padding: 0 1em;
+	margin: 7% 20px 8% 20px;
+}
+
+
+
+#ajax-infobox,
+#ajax-dropdown {
+	position: absolute; 
+	z-index: 2998;
+	top: 87px;
+	left: 0;
+	@include bp($bp-tablet) {
+		position: absolute; 
+		top: 37px;
+		right: 0;
+		left: auto;
+	}
+}
+
+
+.lt-ie9 #ajax-infobox,
+.lt-ie9 #ajax-dropdown {
+		position: absolute; 
+		top: 37px;
+		right: 0;
+}
+
+
+.ajaxy-cart {
+	background-color: $white;
+	border: $border;
+	box-shadow: 1px 1px 3px $black-2;
+	width: 96%;
+	padding: 16px 2% 0 2%;
+	@include bp($bp-tablet) {
+		position: relative;
+		width: 300px;
+		padding: 20px 10px 0 10px;
+	}
+}
+
+
+
+
+
+	
+.ajaxy-login {
+	/* centered popup */
+	
+}
+	
+.ajaxy-login p { text-transform: lowercase; font-weight: $bold; font-size: 1.3em; margin: 1em 0; }
+.ajaxy-login .required label { color: $text; }
+.ajaxy-login ol input[type="text"], 
+.ajaxy-login ol input[type="password"] { width: 70%; }
+.ajaxy-login .submit-btn input { float: right; }
+.ajaxy-login .register-user { text-align: center; margin-top: 2em; }
+
+.ajaxy-login #ajax-spinner { float: right; margin: 0 12px 0 0;}
+
+
+.ajaxy-waiting {  }
+.ajaxy-waiting .note { color: $text-medium; }
+
+.ajax-spinner { margin: 1em auto; }
+
+
+.ajaxy-promoapplied { height: auto !important; }
+
+.ajaxy-promoapplied .msg-box { margin-bottom: 20px; }
+.ajaxy-promoapplied .go-shopping { font-size: 1.2em; font-family: Georgia, "Times New Roman", Times, serif; }
+.ajaxy-promoapplied ul li { margin: 10px 0; }
+
+
+
+
+ /* -------------------
+	add to cart ajax fragment
+ --------------------- */
+
+li.incart { list-style: none; }
+
+.incart { clear: both; }
+.incart .text { 
+	float: right; 
+	@include bp($bp-tablet) {
+		width: 210px;
+	}
+}
+.incart .img-container { float: left; width: 78px; margin-right: 10px; }
+.incart .item-total { float: right; margin-right: .5em; }
+
+
+.incart .qty-label .qty { font-weight: $bold; }
+
+.ajaxy-cart fieldset.buttons a.btn-checkout { width: 58%; float: right; }
+.ajaxy-cart fieldset.buttons a.btn-viewcart { 
+	width: 38%; 
+	float: left; 
+	font-weight: $bold; 
+	font-size: 1.1em; 
+	padding: .75em 0;
+}
+.ajaxy-cart fieldset.buttons a.btn-checkout:hover { background: #899639; }
+
+
+.ajaxy-cart .msg-area { margin: 1em; }
+#success-msg { font-weight: $bold; color: #899639; }
+
+
+.ajaxy-cart h5 { text-transform: lowercase; }
+
+.ajaxy-cart .table-ordersum {  }
+.ajaxy-cart #itemcount { text-align: right; }
+.ajaxy-cart #merch-total { text-align: right; }
+
+/* 
+		<div class="ordersummary group">
+			<table class="table table-ordersum">
+				<tbody><tr>
+					<td>total items in cart:</td>
+					<td id="itemcount">6</td>
+				</tr>
+				<tr>
+					<td>merchandise total:</td>
+					<td id="merch-total">$89.70</td>
+				</tr>
+			</tbody></table>
+		</div>
+		<!-- / ordersum-box -->
+*/
+
+
+
+
+
+
+

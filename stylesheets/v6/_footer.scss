@@ -1,0 +1,168 @@
+
+
+
+/* 	-----------------
+	footer navigation
+	----------------- */
+	
+
+.l-footernav { 
+	display: none; 
+	margin: 1em 0; 
+	@include bp($bp-tablet) { 
+		border-top: $border-dash;
+		display: block; 
+		margin: 0 2em -2em 2em; 
+	}
+}
+.lt-ie9 .l-footernav { border-top: $border-dash; display: block; margin: 0 2em -2em 2em; }
+
+.l-footernav .exp-controller { display: none; }
+
+
+.l-footernav .column { 
+	display: none;
+	@include bp($bp-tablet) { 
+		display: block;
+		float: left;
+		width: 22.75%; margin: 0 0 0 3%;
+	}
+}
+.lt-ie9 .l-footernav .column { 
+	display: block;
+	float: left;
+	width: 22.75%; margin: 0 0 0 3%;
+	/*outline: 1px dotted red;*/
+}
+
+
+.l-footernav .column:first-child { margin-left: 0; clear: left; }
+
+.l-footernav h5 { font-size: .95em; text-transform: uppercase; letter-spacing: .03em; font-weight: 500; }
+.l-footernav .column > ul { margin: 0; padding: 0; list-style-type: none; }
+.l-footernav .column > h5 { margin-top: 1.5em; }
+.l-footernav .column > ul { margin: .3em 0; }
+.l-footernav .column > ul > li { margin: .65em 0; line-height: normal; }
+.l-footernav .column > ul > li > a { color: $text-light; }
+.l-footernav .column > ul > li > a:hover { color: $text-link; text-decoration: underline; }
+
+.lt-ie9 .l-footernav .column > ul > a { padding: .2em 0;}
+
+@media print {
+	.l-footernav { display: none; }
+}
+
+
+
+
+
+/* 	footer ----------------- */
+	
+.l-footer { 
+	background-image: url('#{$kaf-ui-path}/ap-flour-3cups.jpg');
+	background-position: 100% 100%;
+	background-size: 82px;
+	background-repeat: no-repeat;
+	@include bp($bp-tablet) { 
+		background-size: auto; 
+		min-height: 45px; 
+		padding-top: 40px;  	
+		margin: 0 2em;
+	}
+}
+
+.lt-ie9 footer { 
+		background-position: 100% 0; 
+		background-size: auto; 
+		 
+		margin: 0 2em;
+		margin-top: -2em;
+		min-height: 60px; 
+		padding-top: 2.3em; 
+}
+
+
+
+
+.tf-phone { 
+	margin: 2em 0 1em 0; 
+	@include bp($bp-tablet) { 
+		display: none;
+	}
+}
+.lt-ie9 .tf-phone { display: none; }
+
+.tf-phone > a { color: $text-dark; font-size: 2em; font-weight: 500; text-decoration: none; }
+.tf-phone > a > i.fa { font-size: .75em; }
+.tf-phone > a:hover { color: $text-link; }
+
+
+
+#copyright { 
+	color: $text-light; 
+	font-size: .9em; 
+	display: block; 
+	margin: 18px 90px 10px 0; 
+	padding-bottom: 5px;
+	clear: left;
+	line-height: 135%;
+	@extend %clearfix;
+	@include bp($bp-tablet) { 
+		margin-right: 100px;
+		margin-bottom: 16px;
+		border-bottom: $border-dash;
+	}
+}
+
+.lt-ie9 #copyright { margin-right: 100px; margin-bottom: 16px; border-bottom: $border-dash; }
+
+
+
+
+
+
+
+
+
+
+/* 	-----------------
+	nav in footer
+	----------------- */
+	
+
+.nav-kafabout { 
+	margin-bottom: 6px; 
+	@include bp($bp-tablet) { 
+		float: left; 
+		margin-right: 4px; 
+	}
+}
+.lt-ie9 .nav-kafabout { 
+	float: left; 
+	margin-right: 4px; 
+}
+.nav-kafabout > ul > li > a { color: $text-light; padding: 0 6px 0 8px; border-left: $border; }
+.nav-kafabout > ul > li:first-child > a { border-left: 0; padding-left: 0; }
+.nav-kafabout > ul > li > a:hover { color: $text-link; text-decoration: underline; }
+
+
+.nav-kaflegal { 
+	margin-bottom: 6px; 
+	@include bp($bp-tablet) { 
+		float: left; 
+	}
+}
+.nav-kaflegal > ul > li > a { color:  $text-light; padding: 0 6px 0 8px; border-left: $border; }
+.nav-kaflegal > ul > li:first-child > a { 
+	border-left: 0; padding-left: 0; 
+	@include bp($bp-tablet) { 
+		padding-left: 8px; 
+		border-left: $border; 
+	}
+}
+.lt-ie9 .nav-kaflegal > ul > li:first-child > a { 
+	padding-left: 8px; 
+	border-left: $border;
+}
+
+.nav-kaflegal > ul > li > a:hover { color:  $text-link; text-decoration: underline; }

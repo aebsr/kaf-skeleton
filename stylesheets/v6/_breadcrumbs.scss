@@ -1,0 +1,16 @@
+
+/*	_breadcrumbs.scss */
+
+.breadcrumbs { margin-bottom: 1em; }
+.breadcrumbs > ul > li { display: inline; color: $light-gray; }
+.breadcrumbs > ul > li > span, 
+.breadcrumbs > ul > li > a { 
+	display: inline; 
+	font-weight: $bold; 
+	text-transform: lowercase;  
+}
+nav.breadcrumbs > ul > li > a { color: $link; }
+.breadcrumbs > ul > li:first-child > a { padding-left: 0; }
+.breadcrumbs > ul > li > a:hover { text-decoration: underline; }
+.breadcrumbs > ul > li.active span, 
+.breadcrumbs > ul > li.active a { color: $text; }

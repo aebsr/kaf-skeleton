@@ -1,0 +1,212 @@
+/* 
+
+	v6 layout custom mixins
+	
+*/
+
+
+// 1 boxes mobile, 2 desktop, float L and R no clearing
+
+%box1m2sLR {
+	position: relative;
+	margin: 1em 0;
+	@include bp($bp-tablet) { 
+		float: left; 
+		width: 49%;
+		margin: 1em 0 1em 2%; 
+		&:nth-child(odd) { 
+			margin-left: 0; 
+		}
+		&:nth-child(even) { 
+			float: right;
+		}
+	}
+}
+%ie-box1m2sLR {
+	position: relative;
+	float: left;
+	width: 49%;
+	margin: 1em 0 1em 2%; 
+	&.ieodd { 
+		margin-left: 0; 
+	}
+	&.ieeven { 
+		float: right;
+	}
+}
+
+// 1 boxes mobile, 2 desktop
+
+%box1m2s {
+	position: relative;
+	margin: 1em 0;
+	@include bp($bp-tablet) { 
+		float: left; 
+		width: 48.5%;
+		margin: 1em 0 1em 3%; 
+		&:nth-child(odd) { 
+			margin-left: 0; 
+			clear: left; 
+		}
+	}
+}
+%ie-box1m2s {
+	position: relative;
+	float: left;
+	width: 48.5%;
+	margin: 1em 0 1em 3%; 
+	&.ieodd { 
+		margin-left: 0; 
+		clear: left; 
+	}
+	&:first-child { 
+		margin-left: 0; 
+		clear: left; 
+	}
+}
+
+
+// 2 boxes mobile, 3 desktop
+
+%box2m3s {
+	position: relative;
+	float: left; 
+	width: 47.5%; 
+	margin: 1em 0 1em 5%; 
+	&:nth-child(odd) { 
+		margin-left: 0; 
+		clear: left; 
+	}
+	@include bp($bp-tablet) { 
+		width: 31.3333%; 
+		margin-left: 3%; 
+		&:nth-child(odd) { 
+			margin-left: 3%; 
+			clear: none; 
+		}
+		&:nth-child(3n+1) { 
+			margin-left: 0; 
+			clear: left; 
+		}
+	}
+}
+
+%ie-box2m3s {
+	position: relative;
+	float: left; 
+	width: 31.3333%; 
+	margin-left: 3%; 
+	&.ie3n1 { 
+		margin-left: 0; 
+		clear: left; 
+	}
+}
+
+
+// 2 boxes mobile, 4 desktop
+
+%box2m4s {
+	position: relative;
+	float: left; 
+	width: 47.5%; 
+	margin: 1em 0 1em 5%; 
+	&:nth-child(odd) { 
+		margin-left: 0; 
+		clear: left; 
+	}
+	@include bp($bp-tablet) { 
+		width: 22.75%; 
+		margin-left: 3%; 
+		&:nth-child(odd) { 
+			margin-left: 3%; 
+			clear: none; 
+		}
+		&:nth-child(4n+1) { 
+			margin-left: 0; 
+			clear: left; 
+		}
+	}
+}
+
+%ie-box2m4s {
+	position: relative;
+	float: left; 
+	width: 22.75%; 
+	margin-left: 3%; 
+	&:first-child { 
+		margin-left: 0; 
+		clear: left; 
+	}
+	&.ie4n1 { 
+		margin-left: 0; 
+		clear: left; 
+	}
+}
+
+// 1 box mobile, 3 desktop
+
+%box1m3s {
+	position: relative;
+	@include bp($bp-tablet) { 
+		float: left;
+		width: 31.3333%; 
+		margin-left: 3%; 
+		&:nth-child(odd) { 
+			margin-left: 3%; 
+			clear: none; 
+		}
+		&:nth-child(3n+1) { 
+			margin-left: 0; 
+			clear: left; 
+		}
+	}
+}
+
+%ie-box1m3s {
+	position: relative;
+	float: left; 
+	width: 31.3333%;  
+	margin-left: 3%; 
+	&:first-child { 
+		margin-left: 0; 
+		clear: left; 
+	}
+	&.ie3n1 { 
+		margin-left: 0; 
+		clear: left; 
+	}
+}
+
+// 1 box mobile, 4 desktop
+
+%box1m4s {
+	position: relative;
+	@include bp($bp-tablet) { 
+		float: left;
+		width: 22.75%; 
+		margin-left: 3%; 
+		&:nth-child(odd) { 
+			margin-left: 3%; 
+			clear: none; 
+		}
+		&:nth-child(4n+1) { 
+			margin-left: 0; 
+			clear: left; 
+		}
+	}
+}
+
+%ie-box1m4s {
+	position: relative;
+	float: left; 
+	width: 22.75%; 
+	margin-left: 3%; 
+	&:first-child { 
+		margin-left: 0; 
+		clear: left; 
+	}
+	&.ie4n1 { 
+		margin-left: 0; 
+		clear: left; 
+	}
+}

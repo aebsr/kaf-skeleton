@@ -1,0 +1,66 @@
+
+/*	_tables.scss	*/
+
+
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+.table { width: 100%; margin-bottom: 1em; }
+
+.table th,
+.table td {
+  text-align: left;
+  vertical-align: top;
+  border-top: $border;
+  @include bp($bp-tablet){
+  		padding: 4px 2px; 
+  }
+}
+
+
+.table th {
+  font-weight: $bold;
+/*  border-top: 0; */
+}
+.table thead th {
+  vertical-align: bottom;
+}
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+.table tbody + tbody {
+  border-top: 2px solid $verylight-gray;
+}
+ 
+.table caption { 
+	font-weight: $bold; 
+	text-transform: uppercase; 
+	background-color: transparent; 
+	text-align: center; 
+}
+
+
+/* simple table */
+
+.table-simple { margin: 20px 0; }
+.table-simple th { background-color: $verylight-gray; }
+.table-simple th { border-top: 0; }
+.table-simple td { border-top: 0; }
+
+.table-5 th, .table-5 td { width: 18%; }
+
+
+
+
+

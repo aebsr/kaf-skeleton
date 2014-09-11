@@ -1,0 +1,127 @@
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.hackerproof { text-align: center; margin: 1em 0; }
+
+.tel { white-space: nowrap; }
+
+.ivory { background-color: $ivory; }
+
+.uc { text-transform: uppercase; }
+
+
+/* 	------------------------------------
+	overrides
+	------------------------------------ */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+
+
+.note { color: $text-light; font-size: .9em; line-height: normal; margin: .5em 0;}
+
+.block { display: block; }	
+.inline { display: inline; }
+.wauto, .wauto input { width: auto; }
+
+a.block:hover { text-decoration: none; }
+.strong { font-weight: $bold; }
+
+.purple { outline: 1px dotted purple; } /* use for troubleshooting */
+
+/*
+a h3:after, a h4:after, a h5:after, a h6:after { content: "\A0\00BB"; }  inserts &raquo; */
+a.more:after, span.more:after { content: "\A0\00BB"; } /* inserts &raquo; */
+
+.count { font-size: .9em; color: $text-medium; }
+
+/* icon is applied to a span */
+.icon { 
+	float: left;
+	margin-right: 5px;
+	height: 18px;
+	width: 20px;
+	background-repeat: no-repeat; 
+	zoom: 1;
+}
+.msg { line-height: normal; background-repeat: no-repeat; }
+
+/*
+a[href$="pdf"] {
+	background-image: url(../ui/pdf.gif);
+	background-repeat: no-repeat;
+	padding-right: 20px;
+	background-position: center right;
+	zoom: 1;
+}
+*/
+
+.pdf {
+	background-image: url(../ui/pdf.gif);
+	background-repeat: no-repeat;
+	padding-right: 20px;
+	background-position: center right;
+	zoom: 1;
+}
+
+
+.list { margin: .5em 2em; }
+.list > li { margin: .5em 0; line-height: 140%; }
+
+
+a.tel { 
+	@include bp($bp-tablet) {
+		color: $text;
+		&:hover { border-bottom-color: inherit; }
+	}
+}
+
+.lt-ie9 a.tel { 
+	color: $text; 
+	&:hover { border-bottom-color: inherit; }
+}
+
+
+
+.indent { padding-left: 20px; }
+.nowrap { white-space: nowrap; }
+
+.msg-box { 
+	padding: 14px; 
+	border: 1px solid #DDD; 
+	margin: .5em 0;
+	line-height: normal;
+	background-color: #f9f9f9;
+}
+.msg-box p { margin: 0; }
+
+.msg-box.info { /*color: #6391b5;*/ color: #3B6A95; border-color: #6391b5; background-color: rgba(114,154,199,.1); }
+.msg-box.success { color: #788432; border-color: #899639; background-color: rgba(147,164,69,.1); }
+.msg-box.warning { color: #d97a23; border-color: #d97a23; background-color: rgba(236,137,29,.1); }
+.msg-box.error { color: #c4132a; border-color: #c4132a; background-color: rgba(196,18,48,.1); }
+.msg-box.msg-guarantee {  }
+
+.cc-error { color: #c4132a; }
+.compact li { margin: 3px 0; } 
+
+.lt-ie9 .msg-box.info { background-color: #F1F5F9; }
+.lt-ie9 .msg-box.success { background-color: #F4F6EC; }
+.lt-ie9 .msg-box.warning { background-color: #FDF3E8; }
+.lt-ie9 .msg-box.error { background-color: #F9E7EA; }

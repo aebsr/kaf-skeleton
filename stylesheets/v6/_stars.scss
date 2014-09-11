@@ -1,0 +1,46 @@
+
+.star-rating{display:inline-block;vertical-align:baseline;margin:0;background-repeat:no-repeat;background-image:url(ui/shop.png);height:12px;width:66px}
+
+.product-rating 
+.avg-rating .count{font-weight:400;font-size:1em;padding-right:6px}
+.avg-rating .star-rating{height:16px;width:88px;display:inline-block}
+@media print{
+.star-rating{font-size:12pt;width:auto}
+.avg-rating .count,
+.product-rating .avg-rating .count{font-size:8pt;font-weight:400}
+}
+
+.stars50{background-position:0 0}
+.stars45{background-position:0 -28px}
+.stars40{background-position:0 -56px}
+.stars35{background-position:0 -84px}
+.stars30{background-position:0 -112px}
+.stars25{background-position:0 -140px}
+.stars20{background-position:0 -168px}
+.stars15{background-position:0 -196px}
+.stars10{background-position:0 -224px}
+.stars05{background-position:0 -252px}
+.stars0{background-position:0 -281px}
+@media print{
+.stars50:before{content:'\2605\2605\2605\2605\2605'}
+.stars45:before{content:'4.5 stars';font-size:8pt}
+.stars40:before{content:'\2605\2605\2605\2605\2606'}
+.stars35:before{content:'3.5 stars';font-size:8pt}
+.stars30:before{content:'\2605\2605\2605\2606\2606'}
+.stars25:before{content:'2.5 stars';font-size:8pt}
+.stars20:before{content:'\2605\2605\2606\2606\2606'}
+.stars15:before{content:'1.5 stars';font-size:8pt}
+.stars10:before{content:'\2605\2606\2606\2606\2606'}
+.stars05:before{content:'0.5 stars';font-size:8pt}
+.stars0:before{content:'not yet rated';font-size:8pt}}
+.avg-rating .stars50{background-position:-100px 0}
+.avg-rating .stars45{background-position:-100px -28px}
+.avg-rating .stars40{background-position:-100px -56px}
+.avg-rating .stars35{background-position:-100px -84px}
+.avg-rating .stars30{background-position:-100px -112px}
+.avg-rating .stars25{background-position:-100px -140px}
+.avg-rating .stars20{background-position:-100px -168px}
+.avg-rating .stars15{background-position:-100px -196px}
+.avg-rating .stars10{background-position:-100px -224px}
+.avg-rating .stars05{background-position:-100px -252px}
+.avg-rating .stars0{background-position:-100px -281px}

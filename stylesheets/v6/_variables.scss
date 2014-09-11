@@ -1,0 +1,159 @@
+/* 
+	variables
+*/
+
+
+/* for responsive */
+$phone: 480px;
+$tablet: 768px;
+$screen: 992px;
+
+$bp-phone: '(min-width: 480px)';
+$bp-tablet: '(min-width: 768px)';
+$bp-screen: '(min-width: 992px)';
+
+
+/* helpers */
+$outline: 1px dotted red;
+$outline2: 1px dotted blue;
+
+
+
+$kaf-ui-path: 			'ui' !default;
+$kaf-ui-path-custom:	'ui-images' !default;
+
+
+/* fonts */
+$smaller: .9em;
+$smallest: .85em;
+
+// Font weights
+$light: 200;
+$regular: 400;
+$bold: 600;
+
+
+$pad-panel: 12px;
+
+
+/* colors */
+
+$white: #ffffff;
+$black: #000000;
+$orange: #CC6600;
+$dark-orange: #F49228;
+$bright-orange: #FF6600;
+$red: #C4132A;
+$dark-red: #8b0e04;
+$error-red: #CC0000;
+$ivory: #FFF2D7;
+$green: #899639;
+$dark-green: #5C6C10;
+$bright-green: #44782B;
+$teal: #227D8D;
+//#458C30; // used in bso
+
+$lightest-gray: #F5F5F5;
+$verylight-gray: #DDDDDD;
+$light-gray: #C0C0C0;
+$gray: #CCCCCC;
+$medium-gray: #888888;
+$dark-gray: #555555;
+$darkest-gray: #222222;
+
+
+/*	hsla	*/
+
+$black-1: hsla(0, 0, 0, .08);
+$black-2: hsla(0, 0, 0, .18);
+$black-3: hsla(0, 0, 0, .25);
+$black-4: hsla(0, 0, 0, .50);
+$black-5: hsla(0, 0, 0, .75);
+
+$white-1: hsla(360, 100, 100, .18);
+$white-2: hsla(360, 100, 100, .25);
+$white-3: hsla(360, 100, 100, .50);
+$white-4: hsla(360, 100, 100, .70);
+$white-5: hsla(360, 100, 100, .85);
+
+$hsla-red:			hsla(352, 82%, 42%, 1);
+$hsla-dark-red: 	hsla(4, 94%, 28%, 1);
+
+
+
+
+
+/*	background	*/
+
+$bg-lightest: 		$white;
+$bg-lighter: 		$lightest-gray;
+$bg-light: 			$light-gray;
+$bg-medium: 		$gray;
+$bg-darkest: 		$dark-gray;
+
+/*	fills	*/
+/* need to clean these up */
+$kaf-muffin: 		$dark-red;
+$rgb-kaf-muffin: 	$dark-red;
+$red-dark: 			$dark-red;
+$red-bright: 		$red;
+$kaf-red: 			$red;
+$rgb-kaf-red: 		$red;
+$rgb-kaf-green: 	$green;
+
+
+/*	overlay	*/
+
+$overlay: 			$black-1;
+$overlay-dark: 	$black-4;
+
+
+/*	borders	*/
+
+$border: 			1px solid $light-gray;
+$border-med: 		1px solid $medium-gray;
+$border-dark: 		1px solid $dark-gray;
+
+$border-dash: 		1px dashed $light-gray;
+$border-dot: 		1px dotted $light-gray;
+
+
+
+/*	text	*/
+
+$text: 				$darkest-gray;
+$text-title: 		$black; 
+
+$link: 				$orange;
+$text-link: 		$orange;
+$text-lightest: 	$white;
+$text-light: 		$medium-gray;
+$text-medium: 		$medium-gray;
+$text-dark: 		$darkest-gray;
+$text-darkest: 	$black;
+
+
+
+
+
+
+%btnorange {
+	@include linear-gradient(lighten($orange, 5%), $orange);
+	@include border-radius(3px);
+	display: inline-block;
+	border-top: 1px solid lighten($orange, 20%);
+	border-right: 1px solid darken($orange, 5%);
+	border-bottom: 1px solid darken($orange, 5%);
+	border-left: 1px solid lighten($orange, 15%);
+	color: $white;
+	padding: 5px 8px 6px 7px;
+	text-shadow: 0 1px 2px transparentize($black, .7);
+	text-transform: lowercase;
+}
+
+%btnorange:hover { 
+	background: $orange;
+	border-color: darken($orange, 6%);
+}
+
+

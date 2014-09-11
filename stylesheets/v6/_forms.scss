@@ -1,0 +1,300 @@
+/*	_forms.scss */
+
+
+/* 	-----------------
+	forms
+	----------------- */
+	
+input, select, textarea {
+	margin: 0;
+	color: $text;
+	font-size: 13px;
+	font-weight: $regular; 
+	font-family: $kaf-sans; 
+	background-color: $white;
+}
+
+fieldset { padding: 0; margin: 0; border: 0; }
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-top: 1em;
+  font-size: 1.1em;
+  font-weight: $bold;
+  line-height: normal;
+  color: $text;
+  border: 0;
+  text-transform: uppercase;
+/*  border-bottom: 1px solid #eee; */
+}
+
+label, input, button, select, textarea {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: normal;
+}
+input, button, select, textarea { font-family: $helvetica; }
+label { display: block; margin-bottom: 2px; }
+
+input,
+textarea,
+select,
+.uneditable-input {
+  display: inline-block;
+  width: 216px;
+  height: 22px;
+  padding: 4px;
+  margin-bottom: 2px; 
+  font-size: 13px;
+  line-height: 18px;
+/*  color: #555555; */
+  background-color: $white;
+  border: $border;
+}
+textarea { width: 296px; }
+
+.uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+label input,
+label textarea,
+label select {
+  display: block;
+}
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0;
+  /* IE7 */
+
+  line-height: normal;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0 \9;
+  /* IE9 and down */
+
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+input[type="image"] { border: 0; }
+input[type="file"] {
+  width: auto;
+  padding: initial;
+  line-height: initial;
+  background-color: $white;
+  background-color: initial;
+  border: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  width: auto;
+  height: auto;
+}
+select,
+input[type="file"] {
+  height: 28px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+
+  line-height: 28px;
+}
+input[type="file"] {
+  line-height: 18px \9;
+}
+select {
+  width: 220px;
+  background-color: $white;
+}
+select[multiple],
+select[size] { height: auto; }
+input[type="image"] {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+textarea { height: auto; }
+input[type="hidden"] { display: none; }
+
+input:focus,
+textarea:focus { 
+  border-color: $black;
+  outline: 0;
+  outline: thin dotted \9;
+}
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0;
+  /* IE7 */
+
+  line-height: normal;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0 \9;
+  /* IE9 and down */
+
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+
+	
+.radio,
+.checkbox {
+  min-height: 18px;
+  padding-left: 18px;
+}
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px;
+}
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  padding-top: 5px;
+}
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+
+
+
+
+
+form ol > li { position: relative; margin: 12px 0; }
+
+form ol li span.note,
+form ol li span.help-note, 
+form ol li span.inote, 
+form ol li span.error { line-height: normal; }
+
+form .help-note,
+.note.help-note { color: $text-medium; }
+
+form ol li span.note { display: block; color: $text-medium; }
+form ol li span.inote { display: block; color: $text-medium; }
+form ol li span.error { 
+	display: inline-block; 
+	margin: 0;
+	color: $error-red; 
+	line-height: normal; 
+	background-color: #FAE5E5; /* for ie */
+	background-color: rgba(255,0,0,0.1);
+	padding: 4px 6px;
+}
+
+
+
+form .help { color: $text-medium; }
+form .help-note { color: $text-medium; }
+form .required > label { color: $black; }
+form .required > label:after, span.required:after { content: "*"; }
+form .required ul label { font-weight: normal; color: $text; }
+
+
+
+
+
+.input-group-addon, 
+.input-group-btn, 
+.input-group 
+.form-control {
+  box-sizing: border-box;
+}
+
+/* Line 3286 */
+.input-group
+{
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+
+/* Line 6210 */
+.margin-bottom-sm
+{
+  margin-bottom: 5px;
+}
+
+/* Line 3349 */
+.input-group-addon, .input-group-btn, .input-group .form-control
+{
+  display: table-cell;
+}
+
+/* Line 3359 */
+.input-group-addon, .input-group-btn
+{
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Line 3365 */
+.input-group-addon
+{
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555555;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+}
+
+/* Line 3390 */
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn
+{
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+/* Line 3400 */
+.input-group-addon:last-child
+{
+  border-left-width-value: 0px;
+  border-left-style-value: none;
+}

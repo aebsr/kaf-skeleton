@@ -1,0 +1,69 @@
+
+.l-promo { 
+	margin-bottom: 6px; 
+	@include bp($bp-tablet) { 
+		position: absolute; 
+		top: 54px; 
+		left: 18%; 
+		width: 39%; 
+		height: 36px; 
+		overflow: hidden; 
+		margin: 0;
+	}
+	@include bp($bp-screen) { 
+		.l-promo { left: 14%; }
+	}
+}
+.lt-ie9 .l-promo { position: absolute; top: 54px; left: 16%; width: 39%; height: 36px; overflow: hidden; margin: 0; }
+.lt-ie9 .l-promo > a { line-height: 36px; }
+
+/* 	-----------------
+	promo
+	----------------- */
+	
+#promo a { display: block; height: 36px; }
+.sitewidepromo {  }
+.combinepromo {  }
+
+.combinepromo > a,
+.sitewidepromo > a { 
+	text-align: center;
+	color: $white; 
+	padding: .3em; 
+	font-size: 1.3em;
+	font-weight: $regular; 
+	background-color: $dark-red; 
+	line-height: normal;
+	@include bp($bp-tablet) { 
+		font-size: 1.2em;
+		padding-top: .5em;
+	}
+}
+.sitewidepromo > a > em { text-transform: uppercase; font-weight: $bold; font-style: normal; }
+
+.sitewidepromo > a:hover,
+.combinepromo > a { 
+	background-color: $red;
+}
+
+/* used on shop home 
+.promo-section {  
+	@include bp($bp-tablet) { 
+		margin: 0 2em;
+	}
+}
+.promo-section > .sitewidepromo { 
+	@include bp($bp-tablet) { 
+		width: 48.5%; 
+		margin: 1em 0; 
+		float: left;
+	}
+}
+.promo-section > .combinepromo { 
+	@include bp($bp-tablet) { 
+		width: 48.5%;
+		margin: 1em 0 1em 3%; 
+		float: left;
+	}
+}
+*/
